@@ -1,0 +1,18 @@
+Binary file Assets/misc/temp ball game cover.png matches
+Binary file Library/PlayerDataCache/Data/Managed/Mono.Security.dll matches
+Binary file Library/PlayerDataCache/Data/sharedassets0.resource matches
+Binary file Library/UnityAssemblies/UnityEditor.Analytics.dll matches
+Binary file Library/UnityAssemblies/UnityEditor.Graphs.dll matches
+Binary file Library/UnityAssemblies/UnityEditor.dll matches
+Library/UnityAssemblies/UnityEditor.xml[36m:[m        <para>Perform keyframe reduction and choose the best animation curve representation at runtime to reduce memory [1;31mfoo[mtprint (default).</para>
+Library/UnityAssemblies/UnityEngine.AnimationModule.xml[36m:[m        <para>Get left [1;31mfoo[mt bottom height.</para>
+Library/UnityAssemblies/UnityEngine.AnimationModule.xml[36m:[m        <para>Get right [1;31mfoo[mt bottom height.</para>
+Library/UnityAssemblies/UnityEngine.AnimationModule.xml[36m:[m        <para>The left [1;31mfoo[mt.</para>
+Library/UnityAssemblies/UnityEngine.AnimationModule.xml[36m:[m        <para>The right [1;31mfoo[mt.</para>
+Library/UnityAssemblies/UnityEngine.AnimationModule.xml[36m:[m        <para>The left [1;31mfoo[mt.</para>
+Library/UnityAssemblies/UnityEngine.AnimationModule.xml[36m:[m        <para>The right [1;31mfoo[mt.</para>
+Library/UnityAssemblies/UnityEngine.AnimationModule.xml[36m:[m        <para>SharedBetweenAnimatorsAttribute is an attribute that specify that this StateMachineBehaviour should be instantiate only once and shared among all Animator instance. This attribute reduce the memory [1;31mfoo[mtprint for each controller instance.</para>
+Library/UnityAssemblies/UnityEngine.CoreModule.xml[36m:[m      <param name="enableCamera">Enable or disable the camera while broadcasting. Enabling camera allows you to include user camera [1;31mfoo[mtage while broadcasting. The default value is false. To actually include camera [1;31mfoo[mtage in your broadcast, you also have to call ShowCameraPreviewAt as well to position the preview view.</param>
+Library/UnityAssemblies/UnityEngine.CoreModule.xml[36m:[m      <param name="enableCamera">Enable or disable the camera while making a recording. Enabling camera allows you to include user camera [1;31mfoo[mtage while recording. The default value is false. To actually include camera [1;31mfoo[mtage in your recording, you also have to call ShowCameraPreviewAt as well to position the preview view.</param>
+Library/UnityAssemblies/UnityEngine.CoreModule.xml[36m:[m        <para>Render a ProceduralMaterial immutable and release the underlying data to decrease the memory [1;31mfoo[mtprint.</para>
+Binary file Library/metadata/3d/3dfd1e2feddd70d499e78eef781cee75.resource matches
