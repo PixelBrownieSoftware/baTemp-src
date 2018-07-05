@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Level1 : GameManager {
     
 	new void Start ()
-    {
+	{
         levelId = 0;
 
         advice = " The temperature seems to be over 10°C... It's probably the best idea to remove the red blocks with the X button.";
@@ -87,7 +87,7 @@ public class Level1 : GameManager {
 	
 	// Update is called once per frame
 	new void Update ()
-    {
-        base.Update();
+	{
+        	base.Update();
 	}
 }
