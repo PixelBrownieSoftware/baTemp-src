@@ -24,7 +24,6 @@ public class BallScript : MonoBehaviour {
 
     public float speed;
 
-    // Use this for initialization
     void Start () {
 
         ballanim = GetComponent<Animator>();
@@ -49,7 +48,9 @@ public class BallScript : MonoBehaviour {
     }
 
 
-        void OnTriggerEnter2D(Collider2D col)
+    //Notes 24/07/2018: I could have honestly called the kickstart function rather than copying and pasting...
+    
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Blocks") && (col.gameObject.name != "Block_Nothing"))
         {
@@ -73,7 +74,6 @@ public class BallScript : MonoBehaviour {
                         Vector2 boxPosition = col.transform.position;
                         Vector2 ballPosition = gameObject.transform.position;
 
-                        // credit to the people on the unity forums
                         Vector2 delta = ballPosition - boxPosition;
                         Vector2 direction = delta.normalized;
                         rbody.velocity = direction * speed;
@@ -84,7 +84,6 @@ public class BallScript : MonoBehaviour {
                         Vector2 boxPosition = col.transform.position;
                         Vector2 ballPosition = gameObject.transform.position;
 
-                        // credit to the people on the unity forums
                         Vector2 delta = ballPosition - boxPosition;
                         Vector2 direction = delta.normalized;
                         rbody.velocity = direction * speed;
@@ -98,7 +97,6 @@ public class BallScript : MonoBehaviour {
                         Vector2 boxPosition = col.transform.position;
                         Vector2 ballPosition = gameObject.transform.position;
 
-                        // credit to the people on the unity forums
                         Vector2 delta = ballPosition - boxPosition;
                         Vector2 direction = delta.normalized;
                         rbody.velocity = direction * speed;
@@ -110,7 +108,6 @@ public class BallScript : MonoBehaviour {
                         Vector2 boxPosition = col.transform.position;
                         Vector2 ballPosition = gameObject.transform.position;
 
-                        // credit to the people on the unity forums
                         Vector2 delta = ballPosition - boxPosition;
                         Vector2 direction = delta.normalized;
                         rbody.velocity = direction * speed;
@@ -124,7 +121,6 @@ public class BallScript : MonoBehaviour {
                         Vector2 boxPosition = col.transform.position;
                         Vector2 ballPosition = gameObject.transform.position;
 
-                        // credit to the people on the unity forums
                         Vector2 delta = ballPosition - boxPosition;
                         Vector2 direction = delta.normalized;
                         rbody.velocity = direction * speed;
@@ -164,10 +160,8 @@ public class BallScript : MonoBehaviour {
        }
     }
 
-
-
-    // Update is called once per frame
-    void Update () {
+    void Update () 
+    {
         gmanager = GameObject.FindGameObjectWithTag("Level").GetComponent<GameManager>();
 
         switch (temper)
@@ -182,8 +176,7 @@ public class BallScript : MonoBehaviour {
                 ballanim.SetInteger("Block", -1);
                 break;
         }
-
-                transform.Translate(velocity * speed * Time.deltaTime, Space.World);
+        transform.Translate(velocity * speed * Time.deltaTime, Space.World);
        
     }
 }
