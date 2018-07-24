@@ -2,8 +2,20 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+Notes 25/07/2018:
+This is how I made all the levels in this game.
+I hard-coded them into the game and put them as a sepearate class; yes, I was that stupid.
+I didn't really know how to make a level editor at the time let alone make a tile array thing.
+
+Happy to say that if I remade this game now,
+I would have been able to create a level editor which would enable much more levels than 15 to come out.
+They'd be more polished too.
+*/
+
 public class Level1 : GameManager {
     
+	
 	new void Start ()
 	{
         levelId = 0;
@@ -85,7 +97,6 @@ public class Level1 : GameManager {
         if (lmanager.level == levelId) { lmanager.time = time_limit; levelGen(); }
     }
 	
-	// Update is called once per frame
 	new void Update ()
 	{
         	base.Update();
