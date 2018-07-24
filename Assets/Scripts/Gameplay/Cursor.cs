@@ -17,14 +17,13 @@ public class Cursor : MonoBehaviour {
     public GameObject[] blockType;
     public int selectedBlock;
 
-    // Use this for initialization
-    void Start() {
-
+    void Start() 
+    {
         canPlace = true;
         Gmanager = GameObject.FindGameObjectWithTag("Level").GetComponent<GameManager>();
         selectedBlock = 0;
         sfx = GameObject.Find("SFX manager").GetComponent<SoundManager>();
-	}
+    }
 
     void OnTriggerStay2D(Collider2D col)
     {
@@ -43,12 +42,8 @@ public class Cursor : MonoBehaviour {
     }
 
 
-    void Update () {
-        
-
-        //  cursorpos_x = (Mathf.RoundToInt(Input.mousePosition.x) / tileLength);
-        //  cursorpos_y = (Mathf.RoundToInt(Input.mousePosition.y) / tileLength);
-
+    void Update () 
+    {
         if (buttonDown() ) {
             cursorpos_y += Mathf.FloorToInt(Input.GetAxisRaw("Vertical"));
             cursorpos_x += Mathf.FloorToInt (Input.GetAxisRaw("Horizontal"));
@@ -62,12 +57,18 @@ public class Cursor : MonoBehaviour {
 
             for (int i = 0; i < Gmanager.tileObjects.Length; i++)
             {
-                if (cursorpos_y == Gmanager.tileObjects[i].GetComponent<TileBlock>().y && cursorpos_x == Gmanager.tileObjects[i].GetComponent<TileBlock>().x)
+                if (cursorpos_y == Gmanager.tileObjects[i].GetComponent<TileBlock>().y &&
+		    cursorpos_x == Gmanager.tileObjects[i].GetComponent<TileBlock>().x)
                 {
                     Gmanager.selectedBlk = Gmanager.tileObjects[i];
-                    Gmanager.selectedBlkData = Gmanager.selectedBlk.GetComponent<TileBlock>();                         
-                    //sorry for the shit code it took me all day to figure this out, but it worked and was more efficent than deleting the objects
-                    if ((Gmanager.selectedBlkData.temp == TileBlock.temperature.NEUTRAL) && ( Gmanager.selectedBlkData.dest == TileBlock.destructable.NONE) && (Gmanager.selectedBlkData.id != Mathf.Clamp(Gmanager.selectedBlkData.id, 1, 4)))
+                    Gmanager.selectedBlkData = Gmanager.selectedBlk.GetComponent<TileBlock>();   
+			
+                /*sorry for the crappy code it took me all day to figure this out, 
+		but it worked and was more efficent than deleting the objects*/
+			
+                    if ((Gmanager.selectedBlkData.temp == TileBlock.temperature.NEUTRAL) && 
+			( Gmanager.selectedBlkData.dest == TileBlock.destructable.NONE) && 
+			(Gmanager.selectedBlkData.id != Mathf.Clamp(Gmanager.selectedBlkData.id, 1, 4)))
                         {
                         Gmanager.selectedBlkData.temp = blockType[selectedBlock].GetComponent<TileBlock>().temp;
                         Gmanager.selectedBlkData.dest = blockType[selectedBlock].GetComponent<TileBlock>().dest;
@@ -85,12 +86,14 @@ public class Cursor : MonoBehaviour {
         {
             for (int i = 0; i < Gmanager.tileObjects.Length; i++)
             {
-                if (cursorpos_y == Gmanager.tileObjects[i].GetComponent<TileBlock>().y && cursorpos_x == Gmanager.tileObjects[i].GetComponent<TileBlock>().x)
+                if (cursorpos_y == Gmanager.tileObjects[i].GetComponent<TileBlock>().y &&
+		    cursorpos_x == Gmanager.tileObjects[i].GetComponent<TileBlock>().x)
                 {
                     Gmanager.selectedBlk = Gmanager.tileObjects[i];
                     Gmanager.selectedBlkData = Gmanager.selectedBlk.GetComponent<TileBlock>();
 
-                    if ( Gmanager.tileObjects[i].GetComponent<TileBlock>().dest == TileBlock.destructable.BREAKABLE && (Gmanager.selectedBlkData.id == Mathf.Clamp(Gmanager.selectedBlkData.id, 1, 3)))
+                    if ( Gmanager.tileObjects[i].GetComponent<TileBlock>().dest == TileBlock.destructable.BREAKABLE &&
+			(Gmanager.selectedBlkData.id == Mathf.Clamp(Gmanager.selectedBlkData.id, 1, 3)))
                     {
                         Gmanager.selectedBlkData.temp = blockType[3].GetComponent<TileBlock>().temp;
                         Gmanager.selectedBlkData.dest = blockType[3].GetComponent<TileBlock>().dest;
